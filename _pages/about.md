@@ -4,6 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
+![]({{site.baseurl}}/images/me.jpg "A picture of me")
+
 Hi, my name is Roland Riachi! I am a MSc Mathematics and Statistics student at McGill University, under the supervisor of Professor Linan Chen.
 
 My interests primarily revolve around probability theory and computer science. More specifically, my current focus includes stochastic differential equations (SDEs), Gaussian Free Fields, and theoretical machine learning.
