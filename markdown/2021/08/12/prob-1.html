@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      5 min read
     
 </span></p>
 
@@ -172,33 +172,24 @@ In theory, we may choose to allow any set in $\mathcal P(\Omega)$, but since it 
 </blockquote>
 
 <p>Note that combining properties 2. and 3. with De Morgan’s laws, we obtain
-1.3’. if ${A_}$</p>
+1.3’. if ${A_n : n \geq 1}$ is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcap_{n \geq 1} A_n \in \mathcal F$
+and in fact, a $\sigma$-algebra can be equivalently defined using 3’. instead of 3..</p>
+
+<p>Intuitively, $\mathcal F$ represents the kinds of events we are able to observe from a random phenomenon.
+At first glance of the definition of a $\sigma$-algebra, it may seem confusing as to why we don’t allow for uncountable unions in 3..
+Before explaining why it is necessary to restrict ourselves in this way, let’s finally define what exactly is a probability.</p>
 
 <h2 id="probability-measures">
 <a class="anchor" href="#probability-measures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability measures</h2>
 
-<p>This leads us to the answer of the next question.
-In theory, we may choose to allow any subset of \P(\Omega).
-Since it is useful to speak about events as in the way, it makes sense to define the following.</p>
-
-<p>A \sigma-algebra is a collection of subsets \F \subset \P(\Omega) such that the following hold:
-1) \Omega \in \F
-2) if A \in \F, then A^c := \Omega \setminus A \in \F
-3) if {A_n : n \geq 1} is a sequence of events with A_n \in \F for every n \geq 1, then A := \bigcup_{n \geq 1} A_n \in F</p>
-
-<p>Note that using 2), 3), and De Morgan’s laws, we obtain
-3’) if {A_n : n \geq 1} is a sequence of events with A_n \in \F for every n \geq 1, then A := \bigcap_{n \geq 1} A_n \in F
-and in fact, a \sigma-algebra can be equivalently defined using 3’) instead of 3).</p>
-
-<p>Intuitively, \F represents the kinds of events we are able to observe from a random occurance.</p>
-
-<p>Usually, at first glance of the definition of a \sigma-algebra, it seems confusing as to why we don’t allow for uncountable unions in 3).
-Before explaining why it is necessary to restrict ourselves in this way, let’s finally define what exactly is a probability.</p>
-
-<p>A probability measure (or simply a probability) is a function \P : \F \to [0,1] that satisfies the following:
-1) (Non-negativity) For any A \in \F, \P(A) \geq 0
-2) (Boundedness) \P(\Omega) = 1
-3) (countable additivity) If {A_n : n \geq 1} is a sequence of DISJOINT events with A_n \in \F for every n \geq 1, then \P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \P(A_n)</p>
+<blockquote>
+  <p>A probability measure (or simply a probability) is a function \P : \F \to [0,1] that satisfies the following:</p>
+  <ol>
+    <li>(Non-negativity) For any A \in \F, \P(A) \geq 0</li>
+    <li>(Boundedness) \P(\Omega) = 1</li>
+    <li>(Countable additivity) If {A_n : n \geq 1} is a sequence of DISJOINT events with A_n \in \F for every n \geq 1, then \P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \P(A_n)</li>
+  </ol>
+</blockquote>
 
 <p>Given \Omega, \F, and \P as defined above, a triple (\Omega, \F, \P) is called a probabilty space.</p>
 
