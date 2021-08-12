@@ -138,7 +138,7 @@ Modern probability theory emerged in this context in the 17th century through th
 <a class="anchor" href="#sample-spaces" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample spaces</h2>
 
 <blockquote>
-  <p>A <strong>sample space</strong> is a set $\Omega$ and its elements $\omega \in \Omega$ are called <strong>samples</strong>.</p>
+  <p>A <strong>sample space</strong> is a set $\Omega$. An element $\omega \in \Omega$ is called a <strong>sample</strong> and a subset $A \subseteq \Omega$ is called an event.</p>
 </blockquote>
 
 <p>Intuitively, a sample is an outcome of a random occurance and a sample space is simply the set of all possible outcomes.
@@ -147,12 +147,13 @@ This allows us to talk about relationships between samples in the context of the
 
 <p>Here are some examples of how some random phenomena can be represented as a sample space.</p>
 <ul>
-  <li>In the case of tossing a coin once, we might have $\Omega = \set{\text{heads}, \text{tails}}$.</li>
+  <li>In the case of tossing a coin once, we might have $\Omega = {\text{heads}, \text{tails}}$.</li>
   <li>If we were studying the annual number of traffic accidents at a busy intersection, we would have $\Omega = \N$.</li>
-  <li>If we were randomly throwing darts at a square dart board of unit side length, then we could have $\Omega = [0,1] \times [0,1]$, where $\omega \in \Omega$ would represnt the location on the board where the dart lands.</li>
+  <li>If we were randomly throwing darts at a square dart board of unit side length, then we could have $\Omega = [0,1] \times [0,1]$, where $\omega \in \Omega$ would represent the location on the board where the dart lands.</li>
 </ul>
 
-<p>$\begin{align<em>}x &amp;= 5y &amp;= 6\end{align</em>}$</p>
+<p>As can be seen from the examples, beginning with a set gives us a lot of flexibility in the kinds of randomness we can model.
+Moreover, given the definition of an event, we can use the language of set operations to express more complicated outcomes.</p>
 
 <h2 id="sigma-algebras">
 <a class="anchor" href="#sigma-algebras" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sigma algebras</h2>
@@ -167,9 +168,9 @@ This allows us to talk about relationships between samples in the context of the
   <li>if we were randomly throwing darts at a square dart board of unit side length, then we could have \Omega = [0,1] \times [0,1], where \omega \in \Omega would represent the location on the board where the dart lands.</li>
 </ul>
 
-<p>As can be seen from the examples, beginning with a set gives us a lot of flexibility in the kinds of randomness we can model.
-Moreover, given the definition of an event, we can use the language of set operations to express more complicated outcomes.
-For example,</p>
+<p>As can be seen from the examples, beginning with a set gives us a lot of flexibility in the kinds of randomness we can model.</p>
+
+<p>For example,</p>
 <ul>
   <li>in the third example, if A = [0,1/2] \times [0,1] (dart lands in the left half of the board) and B = [0,1] \times [0,1/2] (dart lands in the bottom half of the board), then C := A \cap B = [0,1/2] \times [0,1/2] would be the event that the dart lands in the bottom-left quadrant of the board</li>
   <li>in the second example, if A_n = {n} for n \geq 0, then A := \bigcup_{n \geq 0} A_{2n} is the event that an even number of accidents occur</li>
