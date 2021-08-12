@@ -115,6 +115,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#sample-spaces">Sample spaces</a></li>
 <li class="toc-entry toc-h2"><a href="#sigma-algebras">Sigma Algebras</a></li>
 <li class="toc-entry toc-h2"><a href="#probability-measures">Probability measures</a></li>
+<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
 </ul><p>Sometimes when we repeat actions, we achieve different random outcomes - the prototypical examples cited usually being tossing a coin, rolling a die, or any form of gambling.
@@ -165,14 +166,16 @@ On the other hand, in the third example, if $B := [0,1/2] \times [0,1]$ and $C :
 In theory, we may choose to allow any set in $\mathcal P(\Omega)$, but since it is useful to speak about events in the way above, it makes sense to define the “good” events in $\Omega$ as follows.</p>
 
 <blockquote>
-  <p>A <strong>$\sigma$-algebra</strong> is a collection of subsets $\mathcal F \subseteq \mathcal P(\Omega)$ that satisfies the properties
-1.$\Omega \in \F$
-1.if $A \in \F$, then $A^c := \Omega \setminus A \in \mathcal F$
-1.if {A_n : n \geq 1} is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcup_{n \geq 1} A_n \in \mathcal F$</p>
+  <p>A <strong>$\sigma$-algebra</strong> is a collection of subsets $\mathcal F \subseteq \mathcal P(\Omega)$ that satisfies the properties</p>
+  <ol>
+    <li>$\Omega \in \mathcal F$</li>
+    <li>if $A \in \mathcal F$, then $A^c := \Omega \setminus A \in \mathcal F$</li>
+    <li>if {A_n : n \geq 1} is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcup_{n \geq 1} A_n \in \mathcal F$</li>
+  </ol>
 </blockquote>
 
 <p>Note that combining properties 2. and 3. with De Morgan’s laws, we obtain
-1.3’. if ${A_n : n \geq 1}$ is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcap_{n \geq 1} A_n \in \mathcal F$
+3’. if ${A_n : n \geq 1}$ is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcap_{n \geq 1} A_n \in \mathcal F$
 and in fact, a $\sigma$-algebra can be equivalently defined using 3’. instead of 3..</p>
 
 <p>Intuitively, $\mathcal F$ represents the kinds of events we are able to observe from a random phenomenon.
@@ -183,36 +186,37 @@ Before explaining why it is necessary to restrict ourselves in this way, let’s
 <a class="anchor" href="#probability-measures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability measures</h2>
 
 <blockquote>
-  <p>A probability measure (or simply a probability) is a function \P : \F \to [0,1] that satisfies the following:</p>
+  <p>A probability measure (or simply a probability) is a function $\mathbb P : \mathcal F \to [0,1]$ that satisfies the following:</p>
   <ol>
-    <li>(Non-negativity) For any A \in \F, \P(A) \geq 0</li>
-    <li>(Boundedness) \P(\Omega) = 1</li>
-    <li>(Countable additivity) If {A_n : n \geq 1} is a sequence of DISJOINT events with A_n \in \F for every n \geq 1, then \P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \P(A_n)</li>
+    <li>(Non-negativity) For any $A \in \mathcal F$, $\mathbb P(A) \geq 0$</li>
+    <li>(Boundedness) $\mathbb P(\Omega) = 1$</li>
+    <li>(Countable additivity) If ${A_n : n \geq 1}$ is a sequence of <em>disjoint</em> events with $A_n \in \mathcal F$ for every $n \geq 1$, then $\mathbb P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \mathbb P(A_n)$.
+Moreover, given $\Omega$, $\mathcal F$, and $\mathbb P$ as defined above, a triple $(\Omega, \mathcal F, \mathbb P)$ is called a <strong>probability space</strong>.</li>
   </ol>
 </blockquote>
 
-<p>Given \Omega, \F, and \P as defined above, a triple (\Omega, \F, \P) is called a probabilty space.</p>
+<p>For example, in the context of tossing a coin once, we may have $\Omega = {H, T}$, $\mathcal F = {\emptyset, {H}, {T}, \Omega}$, and $\mathbb P({H}) = \mathbb P = 1/2$.
+In addition, in the dart board example, we may have $\Omega = [0,1] \times [0,1]$, $\mathcal F = \mathcal B(\Omega)$ is the set of borel-measurable subsets of $\Omega$, and $\mathbb P = \lambda$ is Lebesgue measure.</p>
 
-<p>For example,</p>
-<ul>
-  <li>In the first example, we have \Omega = {H, T}, \F = {\emptyset, {H}, {T}, \Omega}, and \P({H}) = \P{{T}} = 1/2</li>
-  <li>In the third example, we have \Omega = [0,1] \times [0,1], \F is the set of borel-measurable subsets of \Omega, and \P = \lambda is Lebesgue measure.</li>
-</ul>
-
-<p>If we allow uncountable unions in the definition of a \sigma-algebra, then given a probability measure, it is possible to a build an event with probability strictly greater than one.
+<p>If we allow uncountable unions in the definition of a $\sigma$-algebra, then given a probability measure, it is possible to a build an event with probability strictly greater than one.
 In other words, it would break our otherwise very nice definition of a probability measure.
 We’ll explain this shortcoming more in-depth in a later post.</p>
 
+<h2 id="conclusion">
+<a class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+
 <p>At last, we finally have the basic ground work on which we can build more probability theory.
-To end, here are some properties of \P which follow directly from the definition and set operation.
+To end, here are some properties of $\mathbb P$ which follow directly from the definition and set operation.
 It’s a good exercise to try proving them!</p>
 
-<p>-\P(A^c) = 1 - \P(A)
--\P(\emptyset) = 0
--(monotonicity) if A \subseteq B, then \P(A) \leq \P(B)
--(sub-additivity) Given a sequence of events {A_n : n \geq 1} which may not necessarily be disjoint, \P(\bigcup_{n \geq 1} A_n) \leq \sum_{n \geq 1} \P(A_n)
--(Continuity from below) Given {A_n : n \geq 1} with A_n \subseteq A_{n+1} then \P(\bigcup_{n \geq 1} A_n) = \lim_{n \to \infty} \P(A_n)
--(Continuity from above) Given {A_n : n \geq 1} with A_{n+1} \subseteq A_n then \P(\bigcap_{n \geq 1} A_n) = \lim_{n \to \infty} \P(A_n)</p>
+<ul>
+  <li>$\mathbb P(A^c) = 1 - \mathbb P(A)$</li>
+  <li>$\mathbb P(\emptyset) = 0$</li>
+  <li>(Monotonicity) if $A \subseteq B$, then $\mathbb P(A) \leq \mathbb P(B)$</li>
+  <li>(Sub-additivity) Given a sequence of events ${A_n : n \geq 1 }$ <em>which may not necessarily be disjoint</em>, $\mathbb P(\bigcup_{n \geq 1} A_n) \leq \sum_{n \geq 1} \mathbb P(A_n)$</li>
+  <li>(Continuity from below) Given ${A_n : n \geq 1}$ with $A_n \subseteq A_{n+1}$ then $\mathbb P(\bigcup_{n \geq 1} A_n) = \lim_{n \to \infty} \mathbb P(A_n)$</li>
+  <li>(Continuity from above) Given ${A_n : n \geq 1}$ with $A_{n+1} \subseteq A_n$ then $\mathbb P(\bigcap_{n \geq 1} A_n) = \lim_{n \to \infty} \mathbb P(A_n)$</li>
+</ul>
 
   </div><a class="u-url" href="/probable-potato/markdown/2021/08/12/prob-1.html" hidden></a>
 </article>
