@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -113,6 +113,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#basic-definitions">Basic definitions</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#sample-spaces">Sample spaces</a></li>
+<li class="toc-entry toc-h2"><a href="#in-the-case-of-tossing-a-coin-once-we-might-have-omega--settextheads-texttails">In the case of tossing a coin once, we might have $\Omega = \set{\text{heads}, \text{tails}}$.</a></li>
 <li class="toc-entry toc-h2"><a href="#sigma-algebras">Sigma algebras</a></li>
 <li class="toc-entry toc-h2"><a href="#probability-measures">Probability measures</a></li>
 </ul>
@@ -141,9 +142,25 @@ Modern probability theory emerged in this context in the 17th century through th
   <p>A <strong>sample space</strong> is a set $\Omega$ and its elements $\omega \in \Omega$ are called <strong>samples</strong>.</p>
 </blockquote>
 
-<p>[
-  x = 5
-]</p>
+<p>Intuitively, a sample is an outcome of a random occurance and a sample space is simply the set of all possible outcomes.
+Rarely, we can further suppose that $\Omega$ has some additional kind of structure, such as being a metric space or Riemannian manifold.
+This allows us to talk about relationships between samples in the context of the intrinsic structure of $\Omega$; however this is far beyond the scope of what we cover in this post.</p>
+
+<p>Here are some examples of how some random phenomena can be represented as a sample space.</p>
+<ul>
+  <li>
+    <h2 id="in-the-case-of-tossing-a-coin-once-we-might-have-omega--settextheads-texttails">
+<a class="anchor" href="#in-the-case-of-tossing-a-coin-once-we-might-have-omega--settextheads-texttails" aria-hidden="true"><span class="octicon octicon-link"></span></a>In the case of tossing a coin once, we might have $\Omega = \set{\text{heads}, \text{tails}}$.</h2>
+    <p>-</p>
+  </li>
+</ul>
+
+<p>$
+\begin{align<em>}
+  x &amp;= 5
+  y &amp;= 6
+\end{align</em>}
+$</p>
 
 <h2 id="sigma-algebras">
 <a class="anchor" href="#sigma-algebras" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sigma algebras</h2>
@@ -151,11 +168,7 @@ Modern probability theory emerged in this context in the 17th century through th
 <h2 id="probability-measures">
 <a class="anchor" href="#probability-measures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability measures</h2>
 
-<p>First, we address the problem of modelling outcomes.
-Formally, we a sample space is a set \Omega and its elements \omega \in \Omega are called samples (alternatively observations or outcomes). A subset A \subseteq \Omega is called an event.</p>
-
-<p>Intuitively, a sample is an outcome of a random occurance and the sample space is the set of all possible outcomes.
-For example,</p>
+<p>For example,</p>
 <ul>
   <li>in the case of tossing a coin once, we might have \Omega = {\text{heads}, \text{tails}}</li>
   <li>if we were studying the annual number of traffic accidents at a busy intersection, we would have \Omega = \N</li>
