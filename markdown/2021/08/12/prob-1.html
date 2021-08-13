@@ -170,7 +170,7 @@ In theory, we may choose to allow any set in $\mathcal P(\Omega)$, but since it 
   <ol>
     <li>$\Omega \in \mathcal F$</li>
     <li>if $A \in \mathcal F$, then $A^c := \Omega \setminus A \in \mathcal F$</li>
-    <li>if {A_n : n \geq 1} is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $A := \bigcup_{n \geq 1} A_n \in \mathcal F$</li>
+    <li>if {A_n : n \geq 1} is a sequence of events with $A_n \in \mathcal F$ for every $n \geq 1$, then $\displaystyle A := \bigcup_{n \geq 1} A_n \in \mathcal F$</li>
   </ol>
 </blockquote>
 
@@ -190,10 +190,11 @@ Before explaining why it is necessary to restrict ourselves in this way, let’s
   <ol>
     <li>(Non-negativity) For any $A \in \mathcal F$, $\mathbb P(A) \geq 0$</li>
     <li>(Boundedness) $\mathbb P(\Omega) = 1$</li>
-    <li>(Countable additivity) If ${A_n : n \geq 1}$ is a sequence of <em>disjoint</em> events with $A_n \in \mathcal F$ for every $n \geq 1$, then $\mathbb P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \mathbb P(A_n)$.
-Moreover, given $\Omega$, $\mathcal F$, and $\mathbb P$ as defined above, a triple $(\Omega, \mathcal F, \mathbb P)$ is called a <strong>probability space</strong>.</li>
+    <li>(Countable additivity) If ${A_n : n \geq 1}$ is a sequence of <em>disjoint</em> events with $A_n \in \mathcal F$ for every $n \geq 1$, then $\mathbb P(\bigcup_{n \geq 1} A_n) = \sum_{n \geq 1} \mathbb P(A_n)$</li>
   </ol>
 </blockquote>
+
+<p>Moreover, given $\Omega$, $\mathcal F$, and $\mathbb P$ as defined above, a triple $(\Omega, \mathcal F, \mathbb P)$ is called a <strong>probability space</strong>.</p>
 
 <p>For example, in the context of tossing a coin once, we may have $\Omega = {H, T}$, $\mathcal F = {\emptyset, {H}, {T}, \Omega}$, and $\mathbb P({H}) = \mathbb P = 1/2$.
 In addition, in the dart board example, we may have $\Omega = [0,1] \times [0,1]$, $\mathcal F = \mathcal B(\Omega)$ is the set of borel-measurable subsets of $\Omega$, and $\mathbb P = \lambda$ is Lebesgue measure.</p>
